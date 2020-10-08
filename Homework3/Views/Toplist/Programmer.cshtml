@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Homework3.Models.Programmers>
+
+@{
+    ViewData["Title"] = "Programmer";
+}
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div><h1 class="text-center display-4">@ViewBag.title4</h1><br /><br></div>
+        <table class="table table-hover table-dark text-center" style="width: 1000px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ">
+            <thead>
+                <tr class="bg-success">
+                    <th scope="col">Rank</th>
+                    <th scope="col">Programmer Name</th>
+                    <th scope="col">Company</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewData["gmerlist"] as IEnumerable<Homework3.Models.Programmers>)
+                {
+                    <tr>
+                        <th scope="row">@item.ProgrammerId</th>
+                        <td>@item.ProgrammerName</td>
+                        <td>@item.ProgrammerCompany</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="row justify-content-md-center">
+        <a class="btn btn-primary btn-lg" asp-controller="Toplist" asp-action="Index" role="button">Home</a>
+    </div>
+</div>

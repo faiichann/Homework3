@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="jumbotron jumbotron-fluid bg-danger text-white" style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
+        <div class="container">
+            <h1 class="display-4">Ranking Programming World</h1>
+            <p class="lead">This is a Ranking by faiichann Survey around the world and up to interested people.</p>
+        </div>
+    </div>
+    <div><h1>Ranking Popular Title</h1></div>
+    <div class="list-group">
+        <a asp-controller="Toplist" asp-action="Language" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">1. @ViewBag.title1</h5>
+                <small>3 days ago</small>
+            </div>
+            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            <small>update lasted by faiichann.</small>
+        </a>
+        <a asp-controller="Toplist" asp-action="Tool" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">2. @ViewBag.title2</h5>
+                <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            <small class="text-muted">update lasted by faiichann.</small>
+        </a>
+        <a asp-controller="Toplist" asp-action="Website" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">3. @ViewBag.title3</h5>
+                <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            <small class="text-muted">update lasted by faiichann.</small>
+        </a>
+        <a asp-controller="Toplist" asp-action="Programmer" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">4. @ViewBag.title4</h5>
+                <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            <small class="text-muted">update lasted by faiichann.</small>
+        </a>
+    </div>
+</div>
